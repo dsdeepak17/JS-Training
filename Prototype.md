@@ -117,13 +117,13 @@ In this example, we overrode the makeSound method of the Dog prototype with a ne
 
 ## Practice Exercises
 
-Exercise 1:
+#### Exercise 1:
 
 Create a constructor function called Person that takes two arguments name and age. Add a method called introduce to the Person.prototype object that logs "Hello, my name is {name} and I am {age} years old." to the console.
 
 Create two instances of the Person object, one called person1 with the name "John" and age 30, and one called person2 with the name "Jane" and age 25. Call the introduce method on both instances and check that they output the correct message to the console.
 
-Exercise 2:
+#### Exercise 2:
 
 Create a constructor function called Shape that takes one argument type. Add a method called area to the Shape.prototype object that returns 0. Override the area method in each of the following shape constructor functions:
 
@@ -132,7 +132,7 @@ Rectangle: takes two arguments width and height and calculates the area by multi
 Circle: takes one argument radius and calculates the area by multiplying pi (Math.PI) by the radius squared.
 Create an instance of each shape object and call the area method on each instance, checking that the correct value is returned.
 
-Exercise 3:
+#### Exercise 3:
 
 Create a constructor function called Vehicle that takes one argument type. Add a method called drive to the Vehicle.prototype object that logs "Driving a {type} vehicle." to the console.
 
@@ -140,7 +140,7 @@ Create two constructor functions called Car and Bike that inherit from the Vehic
 
 Create an instance of each vehicle object and call the drive method on each instance, checking that the correct message is output to the console.
 
-Exercise 4:
+#### Exercise 4:
 
 Create a constructor function called BankAccount that takes two arguments owner and balance. Add a method called deposit to the BankAccount.prototype object that adds a specified amount to the balance. Add a method called withdraw to the BankAccount.prototype object that subtracts a specified amount from the balance. Add a method called getBalance to the BankAccount.prototype object that returns the current balance.
 
