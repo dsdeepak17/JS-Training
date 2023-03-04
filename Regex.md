@@ -1,6 +1,3 @@
-# JS-Training
-
-
 # Introduction to Regular Expressions
 
 Regular expressions, commonly known as regex, are a powerful tool for searching and manipulating text. A regular expression is a pattern that matches a set of strings, helping us to identify or replace specific parts of a text.
