@@ -7,10 +7,10 @@ Inheritance is one of the most important concepts in Object-Oriented Programming
 
 To understand inheritance in JavaScript, you need to have a basic understanding of the following concepts:
 
-Objects
-Constructors
-Prototypes
-Functions
+- Objects
+- Constructors
+- Prototypes
+- Functions
 
 ## Creating a Base Class:
 
@@ -74,6 +74,55 @@ myCar.start(); // Starting Honda Civic (2021)
 In the above code, we have created an instance of the "Car" class using the "new" operator and passed in the "make", "model", and "year" arguments.
 
 We have also called the "start" method on the "myCar" instance, which logs the make, model, and year of the car to the console.
+
+
+## Inheritance using Factory Function
+
+In JavaScript, you can also achieve inheritance using factory functions. Factory functions allow you to create objects that inherit from a prototype object, similar to how prototypal inheritance works.
+
+Here's an example of factory function inheritance in JavaScript:
+
+```javascript
+function createPerson(name, age) {
+  let person = {};
+
+  person.name = name;
+  person.age = age;
+
+  person.sayHello = function() {
+    console.log(`Hello, my name is ${this.name} and I'm ${this.age} years old.`);
+  };
+
+  return person;
+}
+
+let john = createPerson("John", 30);
+
+function createEmployee(name, age, salary) {
+  let employee = createPerson(name, age);
+
+  employee.salary = salary;
+
+  employee.saySalary = function() {
+    console.log(`My salary is ${this.salary}.`);
+  };
+
+  return employee;
+}
+
+let jane = createEmployee("Jane", 25, 50000);
+
+john.sayHello(); // logs "Hello, my name is John and I'm 30 years old."
+jane.sayHello(); // logs "Hello, my name is Jane and I'm 25 years old."
+jane.saySalary(); // logs "My salary is 50000."
+```
+
+In this example, we have a createPerson factory function that creates objects with name and age properties and a sayHello method. We then have a createEmployee factory function that creates objects with name, age, salary properties, and a saySalary method.
+
+To achieve inheritance between the two factory functions, we call createPerson inside createEmployee and assign the resulting object to employee. This sets up the prototype chain so that employee inherits properties and methods from the person object created by createPerson.
+
+By using factory function inheritance, we can create objects with unique properties and methods while still reusing code and inheriting behavior from a prototype object.
+
 
 
 ## Practice Exercises:
